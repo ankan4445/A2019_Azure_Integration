@@ -1,0 +1,10 @@
+import json
+def read_from_json(response):
+  pyObj = json.loads(response)
+  result = 'No Return from API'
+  try:
+    arr = pyObj['categories']
+    for v in arr:
+      return arr
+  except:
+      return result
